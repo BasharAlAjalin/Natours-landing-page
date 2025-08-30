@@ -1,3 +1,7 @@
+@use "../abstracts/variables" as *;
+@use "./grid" as *;
+@use "../base/utilities" as *;
+
 .header {
   width: 100%;
   height: 95vh;
