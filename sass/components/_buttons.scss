@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -12,6 +13,8 @@
     text-align: center;
     transition: all 0.3s;
     position: relative;
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -24,7 +27,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
@@ -32,7 +37,7 @@
   &--white {
     background-color: $color-white;
     color: $color-grey;
-    border-radius: 10rem;
+    border-radius: $border-radius-big;
 
     &::after {
       background-color: $color-white;
@@ -41,7 +46,7 @@
   &--green {
     background-color: $color-primary;
     color: $color-white;
-    border-radius: 10rem;
+    border-radius: $border-radius-big;
 
     &::after {
       background-color: $color-primary;
@@ -53,7 +58,7 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 10rem;
+    border-radius: $border-radius-big;
     position: absolute;
     top: 0;
     left: 0;
