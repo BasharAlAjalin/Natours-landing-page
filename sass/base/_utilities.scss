@@ -1,9 +1,14 @@
+@use "../abstracts/mixins" as *;
+
 .u-center-text {
   text-align: center !important;
 }
 
 .u-margin-bottom-8 {
   margin-bottom: 8rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-bottom-2 {
@@ -11,6 +16,9 @@
 }
 .u-margin-bottom-4 {
   margin-bottom: 4rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-margin-top-8 {
